@@ -10,7 +10,7 @@ http://naver.me/FFi1alCU
 1.1. ‘F1’ 누른 뒤, Python: 인터프리터 선택 클릭
 
 1.2. WINDOW의 경우: ./django_venv/Script/python.exe을 인터프리터 경로로 지정
-    MAC의 ‼️경우: ./django_venv_mac/bin/python 을 인터프리터 경로로 지정
+    MAC의 경우: ./django_venv_mac/bin/python 을 인터프리터 경로로 지정
 
 1.3. Ctrl+J 누른 뒤, 터미널창에 가상서버가 제대로 켜져 있는지 확인
 
