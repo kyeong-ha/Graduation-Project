@@ -1,0 +1,161 @@
+@import '_init_.scss';
+@import '_header_.scss';
+@import '_animations_.scss';
+@import '_popup_init.scss';
+
+@font-face {
+    font-family: 'SUIT-Bold';
+    src: url('/static/font/SUIT/SUIT-Bold.woff2') format('woff2');
+}
+@font-face {
+    font-family: 'SUIT-Light';
+    src: url('/static/font/SUIT/SUIT-Light.woff2') format('woff2');
+}
+
+// main image 1 //
+.main-image{
+    width: 100%;
+    height: 80%;
+    background-color: #F2F4FF;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    .background{
+        width: 100%;
+        height: auto;
+        img{
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+      }
+
+    .form{
+        padding: 5% 0;
+        height: max-content;
+        width: auto;
+        text-align: center;
+
+        top: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .text{
+            .form-title{
+                font-size: 3rem;
+                font-family: 'SUIT-Bold';
+                margin-bottom:3%;
+            }
+            .form-content{
+                font-size: 1.1rem;
+                line-height: 2rem;
+                font-family: 'SUIT-Light';
+                color: rgb(75, 75, 75);
+                margin-bottom: 4%;
+            }
+        }
+        .submit{
+            @include button;
+            width: 100%;
+            height: 100%;
+            filter:drop-shadow(0 0 15px rgba(45,73,245,0.3));      
+        }
+        .submit img{    
+            height: 100%;
+            min-width: 172px;
+            max-width: 240px;
+            width:auto;
+        }
+    }
+}
+
+// .sub-image{
+//     width: 100%;
+//     height: auto;
+
+//     img{
+//         width: 100%;
+//         height: auto;
+//     }
+
+//     padding-top: 12%;
+// }
+.desc{
+    font-size: 1.4rem;
+    font-family: "SUIT-Light";
+    line-height: 2rem;
+}
+.sub-image{
+    margin-top: 12%;
+    width: 100%;
+    height: auto;
+    
+    display: grid;
+    grid-template-columns: 50% 50%;
+    align-items: center;
+
+    .sub1-1{
+        width: 82%;
+        height: auto;
+        margin: auto;
+        img{
+            margin-left: 2%;
+            width: 100%;
+            height: auto;
+        }
+    }
+    .sub1-2{
+        width: 100%;
+        height: auto;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
+
+        align-items: flex-end;
+        text-align: right;
+        img{
+            width: 95%;
+            height: auto;
+        }
+        p{
+            margin: 5%;
+            margin-right: 12%;
+        }
+    }
+}
+
+.sub-image-2{
+    width: 100%;
+    height: auto;
+
+    position: relative;
+
+    margin-top:10%;
+    img{
+        width: 100%;
+        height: auto;
+    }
+    .sub2{
+        position: absolute;
+        top:0;
+        transform: translate(9vw, 19%);
+        text-align: center;
+        .sub-title{
+            font-size: 2.5rem;
+            font-family: 'SUIT-Bold';
+            margin-bottom:2.2%;
+        }
+    }
+}
+.footer{
+    width: 100%;
+    img{
+        margin: 0;
+        width: 100%;
+    }
+
+}

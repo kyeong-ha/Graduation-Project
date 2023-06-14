@@ -1,0 +1,6 @@
+django_venv_mac/
+django_venv/
+
+node_modules/
+mbti/node_modules/
+mbti/mbtiapp/node_modules/

@@ -1,0 +1,191 @@
+.popup-wrap{
+    width: 100%;
+    height: 100%;
+    background-color:rgba(1, 1, 1, 0.256);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    display:none;
+    padding:15px;
+
+    z-index: 999;
+  }
+  .popup{
+    width:66%;
+    max-width:830px;
+    min-width: 600px;
+    height: max-content;
+    background-color:#ffffff;
+    border-radius:3%;
+    overflow:hidden;
+    box-shadow: 5px 10px 10px 1px rgba(41, 41, 41, 0.3);
+  }
+  .popup-body{
+    width:auto;
+    height: max-content;
+    background-color:#ffffff;
+    padding: 7% 7%;
+    padding-bottom: 4%;
+  }
+  
+  .body-titlebox{
+    text-align:center;
+    width:100%;
+    height:auto;
+    margin-bottom: 4%;
+    h1{
+        font-family: 'GmarketSansMedium';
+        font-size: 2.6rem;
+        margin-block-start: 0;
+        margin-block-end: 0;
+        // font-family: 'TheJamsil4Medium';
+        letter-spacing: -1.03px;
+        color: #2D49F5;
+        text-shadow: 0 0 17px rgba(45,73,245,0.11);
+    }
+  }
+
+  .body-contentbox img{
+    text-align: center;
+  }
+  .body-contentbox{
+    word-break:break-word;
+    overflow-y:auto;
+    height: 50vh;
+    min-height:100px;
+    width:100%;
+    img{
+      width: 100%;
+      height: auto;
+    }
+    h2{
+        text-align: center;
+        font-family: 'SUIT-Bold';
+        font-size: 1.7rem;
+        margin-block-start: 0;
+        margin-block-end: 0.5rem;
+        letter-spacing: -1.03px;
+        color: #8798FF;
+    }
+    h3{
+        text-align: center;
+        font-family: 'SUIT-Medium';
+        font-size: 1.35rem;
+        margin-block-start: 0;
+        margin-block-end: 0.5rem;
+        letter-spacing: -1.03px;
+        color: #2b2b2b;
+    }
+    h4{
+        text-align: center;
+        font-family: 'SUIT-Medium';
+        font-size: 1.2rem;
+        margin-block-start: 0;
+        margin-block-end: 0.5rem;
+        letter-spacing: -1.03px;
+        color: #525252;
+    }
+    p{
+      color: #454549;
+      font-size: 1rem;
+      line-height: 1.2rem;
+      font-family: 'SUIT-Thin';
+    }
+  }
+  .pop-btn{
+    width: auto;
+    height:100%;
+    margin-top: 3.3%;
+  
+    cursor:pointer;
+    div{
+        display: flex;
+        justify-content: center;
+    }
+  }
+  
+  
+  .pop-button {
+    &.dark {
+        --background: #2F3545;
+        --shadow: 0 2px 8px -1px #{rgba(#151924, .32)};
+        --shadow-hover: 0 4px 20px -2px #{rgba(#151924, .5)};
+    }
+    &.white {
+        --background: #fff;
+        --text: #a2cee9;
+        --shadow: 0 2px 8px -1px #{rgba(#121621, .04)};
+        --shadow-hover: 0 4px 20px -2px #{rgba(#121621, .12)};
+    }
+    &.fast {
+        --duration: .32s;
+    }
+  }
+  
+  .pop-button {
+    --background: linear-gradient(to bottom right, #304af3, #7284f5);
+    --text: #fff;
+    --font-size: 1.2rem;
+    --duration: .44s;
+    --move-hover: -4px;
+    --shadow: 0 2px 8px -1px #{rgba(#2D49F5, .32)};
+    --shadow-hover: 0 4px 20px -2px #{rgba(#2D49F5, .5)};
+    --font-shadow: var(--font-size);
+    padding: 3.5%;
+    font-family: 'GmarketSansMedium';
+    text-align: center;
+    font-weight: 500;
+    line-height: var(--font-size);
+    border-radius: 35px;
+    display: block;
+    outline: none;
+    text-decoration: none;
+    font-size: var(--font-size);
+    letter-spacing: .5px;
+    background: var(--background);
+    color: var(--text);
+    box-shadow: var(--shadow);
+    transform: translateY(var(--y)) translateZ(0);
+    transition: transform var(--duration) ease, box-shadow var(--duration) ease;
+    div {
+        display: flex;
+        overflow: hidden;
+        text-shadow: 0 var(--font-shadow) 0 var(--text);
+        span {
+            display: block;
+            backface-visibility: hidden;
+            font-style: normal;
+            transition: transform var(--duration) ease;
+            transform: translateY(var(--m)) translateZ(0);
+            $i: 1;
+            @while $i < 12 {
+                &:nth-child(#{$i}) {
+                    transition-delay: #{$i} / 20 + s;
+                }
+                $i: $i + 1;
+            }
+        }
+    }
+    &:hover {
+        --y: var(--move-hover);
+        --shadow: var(--shadow-hover);
+        span {
+            --m: calc(var(--font-size) * -1);
+        }
+    }
+    &.reverse {
+        --font-shadow: calc(var(--font-size) * -1);
+        &:hover {
+            span {
+                --m: calc(var(--font-size));
+            }
+        }
+    }
+  }
